@@ -1,0 +1,340 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("file:///C:/Web%20Development%20with%20ATOM/fylo-data-storage-component-master/images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-origin: content-box;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+.content {
+  min-height: 100%;
+  margin: 0 auto -35px;
+}
+
+.top-container {
+  background-color: #1D2C67;
+  border-radius: 5% 30% 5% 5%;
+  text-align: left;
+  padding: 30px;
+  box-sizing: border-box;
+  width: 300px;
+  height: 200px;
+}
+
+.fylo {
+  margin-bottom: 2rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon-picture {
+  border-radius: 10%;
+  height: 50px;
+  width: 50px;
+  background-color: #0C122C;
+  margin-right: 10px;
+}
+
+.file {
+  position: relative;
+  top: 25%;
+  left: 30%;
+}
+
+.folder {
+  position: relative;
+  top: 30%;
+  left: 25%;
+}
+
+.cloud {
+  position: relative;
+  top: 35%;
+  left: 25%;
+}
+
+.storage-bar-container {
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #1D2C67;
+  color: white;
+  border-radius: 5%;
+  margin-top: 2rem;
+  text-align: center;
+  width: 300px;
+  height: 170px;
+  box-sizing: border-box;
+  flex-shrink: 2;
+}
+
+.storage-bar-outer {
+  background-color: #0C122C;
+  height: 1.5rem;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+.storage-bar-space {
+  background: linear-gradient(90deg, rgba(255, 163, 153, 1) 0%, rgba(255, 77, 151, 1) 100%);
+  width: 75%;
+  height: 70%;
+  position: relative;
+  top: 15.5%;
+  left: 1%;
+  border-radius: 10px;
+}
+
+.storage-bar-pointer {
+  background: white;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 15.5%;
+  right: 1%;
+}
+
+.lower-value {
+  float: left;
+}
+
+.upper-value {
+  float: right;
+}
+
+.min-max-val-container {
+  clear: both;
+  display: block;
+  min-height: 3rem;
+}
+
+.final-message-1 {
+  background: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #0C122C;
+  width: 55%;
+  height: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 10px;
+  position: relative;
+  bottom: 1px;
+}
+
+.final-message-2 {
+  display: none;
+}
+
+.used-text {
+  color: #E5E8E8;
+}
+
+.used.value {}
+
+.text-left {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: grey;
+  border-style: none;
+}
+
+.value-left {
+  font-weight: 700;
+  display: inline;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 20px;
+}
+
+.footer,
+.push {
+  height: 35px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3E52A3;
+}
+
+.flexible-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding-top: 100px;
+}
+
+/* Desktop 1440px ----------- */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: #0C122C;
+    background-image: url("file:///C:/Web%20Development%20with%20ATOM/fylo-data-storage-component-master/images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: 100% 50%;
+  }
+
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .flexible-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    flex-flow: row wrap;
+    height: 600px;
+    width: 100%;
+  }
+
+  .top-container {
+    margin-right: 20px;
+  }
+
+  .storage-bar-container {
+    width: 600px;
+    flex-shrink: 2;
+    border-radius: 10px;
+    padding-top: 2.5%;
+  }
+
+  .final-message-1 {
+    display: none;
+  }
+
+  .final-message-2 {
+    display: block;
+    position: relative;
+    background: #00aabb;
+    border-radius: .4em;
+  }
+
+  .final-message-2:after {
+    content: 'dddff';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #00aabb;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+    /*background: white;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-weight: 700;
+        color: #0C122C;
+        width: 55%;
+        height: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px 10px;
+        position: relative;
+        top: 1px;*/
+  }
+
+  /*
+.slidecontainer {
+  width: 100%;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .slider {
+      overflow: hidden;
+      width: 100%;
+      -webkit-appearance: none;
+      background-color: hsl(229, 57%, 11%);
+      outline: none;
+    }
+
+    .slider::-webkit-slider-runnable-track {
+      height: 80%;
+      -webkit-appearance: none;
+      color: #13bba4;
+      margin-top: -1px;
+    }
+
+    .slider::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 10px;
+      cursor: ew-resize;
+      background: #434343;
+      box-shadow: -200px 0 0 200px #fff;
+
+    }
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(255,163,153,1) 0%, rgba(255,77,151,1) 100%);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.slider::-ms-fill-lower {
+	background-color: #fff;
+}
+
+.slider::-moz-range-progress {
+	background-color: #000;
+}*/
